@@ -1,3 +1,8 @@
+// Daily Challenge
+
+// Create a function that takes an 2 arguments, an array of objects and a string character 
+// (eg. "a" or "b", etc.). The function should return all the objects in the array where the property 
+// name of that object contains the string character.
 let people = [
     {
         name: "Annette",
@@ -41,4 +46,11 @@ function searchByChar(array, searchTerm) {
     return resultArr;
 }
 
-console.log(searchByChar(people, "A"));
+console.log(searchByChar(people, "A")); 
+//Output:
+// [
+//     { name: 'Annette', age: 37 },
+//     { name: 'Helena', age: 40 },
+//     { name: 'Rosemary', age: 39 },
+//     { name: 'Mary', age: 70 }
+//   ]

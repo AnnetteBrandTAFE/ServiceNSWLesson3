@@ -1,20 +1,30 @@
-//Q1
+//Function Exercise
+
+//Q1 Create a function that takes 2 arguments that are numbers and returns the sum of those numbers.
+
 // function addNumbers(number1, number2) {
 //     return number1 + number2;
 // }
 // let caculatedNumber = addNumbers(1,2);
 // console.log(caculatedNumber);
-// //Q2
-// function largestNumber(number1, number2) {
-//     if (number1 > number2) {
-//         return number1;
-//     }
-// }
-// return number2;
+// Output: 3
 
-// let biggerNumber = largestNumber(10,20);
-// console.log(biggerNumber);
-//Q3
+// Q2 Create a function that takes 2 arguments that are numbers and returns the largest of those
+// numbers.
+
+// function largestNumber(num1, num2) {
+//     if (num1 > num2) {
+//         return num1;
+//     }
+//     return num2;
+// }
+
+// let biggerNumber = largestNumber(37, 1005);
+// console.log(biggerNumber); //Output: 1005
+
+// Q3 Create a function that takes 1 argument that is an array and prints each of the element 
+// in that array to the console.
+
 // myPets = [
 //     {
 //     name: "Starlight",
@@ -28,7 +38,8 @@
 //         name: "Ariel",
 //         species: "Mermaid",
 //         age: "16" 
-//     }]
+//     }
+// ]
 //    function seperateArgument(myPets) {
 //        for (let i = 0; i < myPets.length; i++) {
 //            let argument = myPets[i];
@@ -36,16 +47,22 @@
            
 //        }
 //     }
-//Q4
+
+// Q4 Create a function that takes 2 arguments, name and age, and returns an object with properties 
+//name and age set to the values passed in.
+
 // function questionFour(name, age) {
 //     return {
 //         name: name, 
-//         age: age
+//         age: age,
 // }
 // }
 //     let Annette = questionFour("Annette", 37);
-//     console.log(questionFour);
-//Q5
+//     console.log(Annette); //Output: { name: 'Annette', age: 37 }
+
+// Q5 Create a function that takes 1 argument that is an array of objects representing people. 
+// Each object should have a property name which should be a string and a property age which should 
+// be a number. The function should return the name of the oldest person.
 
 let myPets = [
     {
@@ -61,22 +78,19 @@ let myPets = [
         species: "Mermaid",
         age: "16" 
     }]
-
-    function oldestAnimal(myPets) {
-let oldest;
-    for(let i = 0; i < myPets.length; i++) {
-    let animal = array[i];
-    if (oldestAnimal) {
-        if (animal.age > oldestAnimal.age) {
-            oldest = animal;
+    function getOldest(array) {
+        let oldestCurrent;
+        for (let i = 0; i < array.length; i++) {
+            let person = array[i];
+            if (oldestCurrent) {
+                if (person.age > oldestCurrent.age) {
+                    oldestCurrent = person;
+                }
+            } else {
+                oldestCurrent = person;
+            }
         }
-    } else {
-        oldest = animal;
-
+        return oldestCurrent.name;
     }
-    }
-    return oldest.name;
-}
-
-console.log(oldest(myPets));
+    console.log(getOldest(myPets)); //Output: Starlight
     
